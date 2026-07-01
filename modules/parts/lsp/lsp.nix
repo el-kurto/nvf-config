@@ -3,7 +3,7 @@
   lsp.otter-nvim.enable = true;
   lsp.formatOnSave = true;
   lsp.lspconfig.enable = true;
-  lsp.presets.tailwindcss-language-server.enable = true;
+  lsp.trouble.enable = true;
 
   augroups = [
     {

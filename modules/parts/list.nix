@@ -9,7 +9,6 @@
   ./indent-blankline.nix
   ./blink-cmp.nix
   ./conform.nix
-  ./trouble.nix
   ./todo-comments.nix
   ./which-key.nix
   ./autopairs.nix
