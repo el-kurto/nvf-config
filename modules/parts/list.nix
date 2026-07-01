@@ -1,0 +1,19 @@
+[
+  ./options.nix
+  ./bufferline.nix
+  ./neo-tree.nix
+  ./fzf-lua.nix
+  ./git.nix
+  ./lualine.nix
+  ./noice.nix
+  ./indent-blankline.nix
+  ./blink-cmp.nix
+  ./conform.nix
+  ./trouble.nix
+  ./todo-comments.nix
+  ./which-key.nix
+  ./autopairs.nix
+  ./mini-surround.nix
+  ./lsp/lsp.nix
+  ./lsp/languages.nix
+]
