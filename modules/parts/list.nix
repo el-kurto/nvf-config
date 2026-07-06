@@ -1,5 +1,8 @@
 [
   ./options.nix
+  ./keymaps.nix
+  ./autocmds.nix
+  ./ui.nix
   ./bufferline.nix
   ./neo-tree.nix
   ./fzf-lua.nix
