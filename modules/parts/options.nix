@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   viAlias = true;
   vimAlias = true;
 
@@ -55,6 +59,22 @@
 
     sessionoptions = "buffers,curdir,tabpages,winsize,winpos";
   };
+
+  autocmds = [
+    {
+      event = ["FileType"];
+      pattern = ["markdown"];
+      desc = "Enable wrap for markdown";
+      callback =
+        lib.generators.mkLuaInline
+        # lua
+        ''
+          function()
+            vim.opt_local.wrap = true
+          end
+        '';
+    }
+  ];
 
   ui.borders.enable = true;
   ui.borders.globalStyle = "single";
@@ -207,6 +227,13 @@
       action = "<cmd>set relativenumber!<CR>";
       silent = true;
       desc = "Toggle relative line numbers";
+    }
+    {
+      key = "<leader>uw";
+      mode = ["n"];
+      action = "<cmd>setlocal wrap!<CR>";
+      silent = true;
+      desc = "Toggle wrap";
     }
     {
       key = "<leader>um";
